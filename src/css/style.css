@@ -527,3 +527,171 @@ footer {
     margin: 20px auto;
   }
 }
+
+/* Social Impact Redesign */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.impact-card {
+  background: linear-gradient(135deg, var(--bg-card), rgba(59, 130, 246, 0.1));
+  border-radius: var(--radius);
+  padding: 30px;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.impact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), #8b5cf6, #ec4899);
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.impact-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  background: linear-gradient(90deg, #fff, #a1a1aa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
+[data-theme="light"] .impact-card h3 {
+  background: linear-gradient(90deg, #18181b, #52525b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.impact-subtitle {
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.impact-text {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+}
+
+/* Adjust tag container for left alignment in impact cards */
+.impact-card .tag-container {
+  justify-content: flex-start;
+  margin-top: auto;
+}
+
+/* Experience & Internships Redesign */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.experience-card {
+  background: linear-gradient(135deg, var(--bg-card), rgba(16, 185, 129, 0.1));
+  /* Emerald tint */
+  border-radius: var(--radius);
+  padding: 30px;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #10b981, #34d399, #6ee7b7);
+  /* Emerald/Teal gradient */
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(16, 185, 129, 0.15);
+  /* Green shadow */
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.experience-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  background: linear-gradient(90deg, #fff, #d1fae5);
+  /* Light green text gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
+[data-theme="light"] .experience-card h3 {
+  background: linear-gradient(90deg, #064e3b, #065f46);
+  /* Dark green for light mode */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.experience-subtitle {
+  color: #10b981;
+  /* Emerald-500 */
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.experience-content ul {
+  list-style: none;
+  /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.experience-content li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.experience-content li::before {
+  content: '▹';
+  /* Custom bullet */
+  position: absolute;
+  left: 0;
+  color: #10b981;
+}
